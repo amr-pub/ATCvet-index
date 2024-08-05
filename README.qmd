@@ -1,16 +1,19 @@
-# ATCvet index
-
+---
+title: "ATCvet index"
+format: gfm
+---
 
 The Anatomical Therapeutic Chemical (ATC) index for veterinary medicinal
-products ([ATCvet](https://atcddd.fhi.no/atcvet/atcvet_index/)) is a
-system for the classification of substances intended for therapeutic use
-in veterinary medicine.
+products ([ATCvet](https://atcddd.fhi.no/atcvet/atcvet_index/)) is a system for
+the classification of substances intended for therapeutic use in veterinary
+medicine. 
 
 Created using [ATCtools](https://github.com/amr-pub/ATC-tools).
 
 ## Combine .CSVs
 
-``` r
+```{r eval=FALSE}
+
 library(here)
 library(readr)
 library(stringr)
@@ -26,4 +29,5 @@ ATCvet    <- readr::read_csv(file = filepaths)
 
 # Write the ATCvet CSV.
 readr::write_csv(ATCvet, here::here("ATCvet.csv"))
+
 ```
